@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+qa-*.jpg
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.env*
+!.env.example

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var currentFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return currentFetch; },
+            set: function(val) { currentFetch = val; },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // fetch property already configurable or non-redefinable
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King of Intelligence — NIUXVERSE</title>
+    <meta name="description" content="Portfolio of Nwaeze David — The King of Intelligence. Human-Centered Designer prepared for the Age of AI and futuristic technologies." />
+    <meta property="og:title" content="King of Intelligence — NIUXVERSE" />
+    <meta property="og:description" content="Portfolio of Nwaeze David — The King of Intelligence. Human-Centered Designer prepared for the Age of AI and futuristic technologies." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
